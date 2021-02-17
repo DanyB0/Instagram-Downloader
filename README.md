@@ -2,8 +2,6 @@
 
 # Language: Python
 
-Download InstagramDownloader --> https://drive.google.com/drive/folders/1ujqc6nLfB78Y9p8MPdD-BJuWbVIit16l?usp=sharing
-
 ################################
 ENGLISH
 ################################
