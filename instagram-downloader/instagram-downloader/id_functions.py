@@ -8,9 +8,9 @@ from tkinter import messagebox
 from tkinter import filedialog
 from tkcolorpicker import askcolor
 
+#Change directory into the text files one
+#Cambio la directory nei file di testo
 def chd_1():
-    #Change directory into the text files one
-    #Cambio la directory nei file di testo
     directory4 = os.getcwd().replace("file-testo","") + r"\immagini"
     os.chdir(directory4)
 
