@@ -2,9 +2,9 @@ import os
 import sys
 import ctypes
 import tkinter as tk
-from tkinter import messagebox
 import id_functions as idf
 from PIL import Image, ImageTk
+from tkinter import messagebox
 
 class self(tk.Frame):
 
@@ -43,21 +43,21 @@ class self(tk.Frame):
         self.sfondo = tk.Label(self, image=self.img_sfondo, bg="green")
         self.sfondo.grid(row=0, column=0)
         
-        self.logi = tk.Label(self, text="Login", font=("Helvetica", 12), bg=sfondo, fg=scritte).grid(row=0, column=0, padx=12, pady=35, sticky="se")
+        self.logi = tk.Label(self, text="Login", font=("Helvetica", 12), bg=sfondo, fg=scritte, width=6).grid(row=0, column=0, padx=5, pady=33, sticky="se")
         
-        self.log = tk.Button(self, text=("▼"), font=("Helvetica", 12), command=idf.mostra_login, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
+        self.log = tk.Button(self, text=("▼"), font=("Helvetica", 12), command=idf.mostra_login, bg=sfondo, fg=scritte, width=3,  activebackground=sfondo, activeforeground=scritte)
         self.log.grid(row=0,column=0, padx=3, pady=3, sticky="se")
         self.log.configure(bd=0, relief="flat")
         
-        self.elimin = tk.Button(self, text=("▲"), font=("Helvetica", 12), command=idf.elimina_login, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
+        self.elimin = tk.Button(self, text=("▲"), font=("Helvetica", 12), command=idf.elimina_login, bg=sfondo, fg=scritte, width=3, activebackground=sfondo, activeforeground=scritte)
         self.elimin.grid(row=0,column=0, padx=35, pady=3, sticky="se")
         self.elimin.configure(bd=0, relief="flat")
 
-        self.menu = tk.Button(self, text=("Menu"), font=("Helvetica", 12), command=idf.menu, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
+        self.menu = tk.Button(self, text=("Menu"), font=("Helvetica", 12), command=idf.menu, bg=sfondo, fg=scritte, width=5, activebackground=sfondo, activeforeground=scritte)
         self.menu.grid(row=0,column=0, padx=3, pady=3, sticky="nw")
         self.menu.configure(bd=0, relief="flat")
 
-        self.docu = tk.Button(self, text=(" Doc."), font=("Helvetica", 12), command=idf.docum, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
+        self.docu = tk.Button(self, text=(" Doc."), font=("Helvetica", 12), command=idf.docum, bg=sfondo, fg=scritte, width=5, activebackground=sfondo, activeforeground=scritte)
         self.docu.grid(row=0,column=0, padx=3, pady=36, sticky="nw")
         self.docu.configure(bd=0, relief="flat")
         
@@ -75,6 +75,8 @@ def main():
 #Ask the user if he wants to read the documentation
 #Chiede all'utente se vuole leggere la ducumentazione
 def doc():
+    directory24 = os.getcwd().replace("immagini","") + r"\file-testo"
+    os.chdir(directory24)    
     domanda = tk.messagebox.askquestion ("Open Documentation","Do you want to open the documentation?", icon = "question")
     if domanda == "yes":
         os.system("README.md")
@@ -82,15 +84,14 @@ def doc():
     else:
         open("num.txt", "w").write("1")
         pass
-
-#Change directory into the text files one
-#Cambio la directory nei file di testo
-directory = os.getcwd()
-os.chdir(directory)
+    #Change directory into the images one
+    #Cambio la directory nelle immagini
+    directory2 = os.getcwd().replace("file-testo","") + r"\immagini"
+    os.chdir(directory2)
 
 #Save the color code and the number (0 or 1)
 #Salvo in varibili i colori e il numero
-sfondo = open("colore-evidenza.txt", "r").readline()
+sfondo = open("colore-sfondo.txt", "r").readline()
 scritte = open("colore-scritte.txt", "r").readline()
 numero = open("num.txt", "r").readline()
 
@@ -105,5 +106,8 @@ if numero == "0":
     doc()
 else:
     pass
+
+print("DanyB0")
+print("\n!!! NON CHIUDERE QUESTA FINESTRA !!!\n")
 
 main()
