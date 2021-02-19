@@ -43,25 +43,25 @@ class self(tk.Frame):
         self.sfondo = tk.Label(self, image=self.img_sfondo, bg="green")
         self.sfondo.grid(row=0, column=0)
         
-        self.logi = tk.Label(self, text="Login", font=("Helvetica", 11), bg=sfondo, fg=scritte).grid(row=0, column=0, padx=12, pady=35, sticky="se")
+        self.logi = tk.Label(self, text="Login", font=("Helvetica", 12), bg=sfondo, fg=scritte).grid(row=0, column=0, padx=12, pady=35, sticky="se")
         
-        self.log = tk.Button(self, text=("▼"), font=("Helvetica", 11), command=idf.mostra_login, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
+        self.log = tk.Button(self, text=("▼"), font=("Helvetica", 12), command=idf.mostra_login, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
         self.log.grid(row=0,column=0, padx=3, pady=3, sticky="se")
         self.log.configure(bd=0, relief="flat")
         
-        self.elimin = tk.Button(self, text=("▲"), font=("Helvetica", 11), command=idf.elimina_login, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
+        self.elimin = tk.Button(self, text=("▲"), font=("Helvetica", 12), command=idf.elimina_login, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
         self.elimin.grid(row=0,column=0, padx=35, pady=3, sticky="se")
         self.elimin.configure(bd=0, relief="flat")
 
-        self.menu = tk.Button(self, text=("Menu"), font=("Helvetica", 11), command=idf.menu, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
+        self.menu = tk.Button(self, text=("Menu"), font=("Helvetica", 12), command=idf.menu, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
         self.menu.grid(row=0,column=0, padx=3, pady=3, sticky="nw")
         self.menu.configure(bd=0, relief="flat")
 
-        self.docu = tk.Button(self, text=(" Doc."), font=("Helvetica", 11), command=idf.docum, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
+        self.docu = tk.Button(self, text=(" Doc."), font=("Helvetica", 12), command=idf.docum, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
         self.docu.grid(row=0,column=0, padx=3, pady=36, sticky="nw")
         self.docu.configure(bd=0, relief="flat")
         
-        self.dany = tk.Label(self, text="DanyB0", font=("Helvetica", 11), bg=sfondo, fg=scritte).grid(row=0, column=0, padx=3, pady=3, sticky="sw")
+        self.dany = tk.Label(self, text="DanyB0", font=("Helvetica", 12), bg=sfondo, fg=scritte).grid(row=0, column=0, padx=3, pady=3, sticky="sw")
 
         #self.sfondo.bind( "<Button-1>", self.pressed )
         #self.sfondo.bind( "<B1-Motion>", self.mouseDragged )
