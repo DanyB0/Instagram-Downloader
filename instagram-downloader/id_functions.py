@@ -1,5 +1,6 @@
 import os
 import sys
+from datetime import datetime
 import instaloader
 import tkinter as tk
 from PIL import Image, ImageTk
@@ -7,28 +8,34 @@ from tkinter import messagebox
 from tkinter import filedialog
 from tkcolorpicker import askcolor
 
+direct = os.getcwd()
+dire2 = direct.replace("immagini", "")
+print(dire2)
+
 #Change directory into the text files one
 #Cambio la directory nei file di testo
 def chd_1():
     directory4 = os.getcwd().replace("file-testo","") + r"\immagini"
     os.chdir(directory4)
+    return directory4
 
 #Change directory into the images one
 #Cambio la directory nelle immagini
 def chd_2():
     directory3 = os.getcwd().replace("immagini","") + r"\file-testo"
     os.chdir(directory3)
+    return directory3
 
 #Change directory into the posts one
 #Cambio la directory nella cartella dei post
 def chd_3():
-    directory5 = os.getcwd().replace("immagini","")
-    os.chdir(directory5)
-    if not os.path.exists(directory5 + r"\posts"):
+    direct2 = direct.replace("immagini","")
+    os.chdir(direct2)
+    if not os.path.exists(direct2 + r"\posts"):
         os.mkdir("posts")
-        os.chdir(directory5 + r"\posts")
+        os.chdir(direct2 + r"\posts")
     else:
-        os.chdir(directory5 + r"\posts")
+        os.chdir(direct2 + r"\posts")
 
 #menu
 def menu():
@@ -37,20 +44,24 @@ def menu():
     menu = tk.Frame(bg=sfondo)
     menu.grid(row=0, column=0, sticky="nw", padx=3, pady=34)
   
-    dire_button = tk.Button(menu, text=("Change Directory"), font=("Helvetica", 12), command=directory, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
-    dire_button.grid(row=0,column=0, padx=3, pady=3, sticky="nwe")
-    dire_button.configure(bd=0, relief="flat")
+    #dire_button = tk.Button(menu, text=("Change Directory"), font=("Helvetica", 12), command=directory, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
+    #dire_button.grid(row=0,column=0, padx=3, pady=3, sticky="nwe")
+    #dire_button.configure(bd=0, relief="flat")
 
     cambia_colore = tk.Button(menu, text="Change Color", font=("Helvetica", 12), command=change_frame, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
     cambia_colore.grid(row=1, column=0, padx=3, pady=3, sticky="sew")
     cambia_colore.configure(bd=0, relief="flat")
 
+    restart_lbl = tk.Button(menu, text="Restart", font=("Helvetica", 12), command=restart, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
+    restart_lbl.grid(row=2, column=0, padx=3, pady=3, sticky="sew")
+    restart_lbl.configure(bd=0, relief="flat")
+
     esci = tk.Button(menu, text="Exit", font=("Helvetica", 12), command=uscita, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
-    esci.grid(row=2, column=0, padx=3, pady=3, sticky="sew")
+    esci.grid(row=3, column=0, padx=3, pady=3, sticky="sew")
     esci.configure(bd=0, relief="flat")
   
     togli_menu = tk.Button(menu, text="◄", font=("Helvetica", 12), command=elimina_menu, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
-    togli_menu.grid(row=3, column=0, padx=3, pady=3, sticky="sew")
+    togli_menu.grid(row=4, column=0, padx=3, pady=3, sticky="sew")
     togli_menu.configure(bd=0, relief="flat")
 
 #Open the documentation
@@ -60,13 +71,19 @@ def docum():
     #Cambio la directory nei file di testo
     chd_2()
     os.system("readme.md")
+    chd_1()
 
 #Asks where the post will bve saved
 #Chiedo dove salvare i post e cambio la directory corrente
-def directory(): 
-    directory = filedialog.askdirectory(title="Saving Directory")
-    os.chdir(directory)
- 
+#def directory():
+#    directo = filedialog.askdirectory(title="Saving Directory")
+#    os.chdir(directo)
+    
+def restart():
+    os.chdir(dire2)
+    print("\nrestarting...")
+    os.startfile("restart.bat")
+
 #Exit
 #Ece dal programma
 def uscita():
@@ -96,21 +113,28 @@ def login(event):
 #Download posts fo the desired profile --- exceptions handling
 #Scarico i post del profilo desiderato e gestisco le eccezioni
 def insta(event):
+    if os.getcwd() != chd_1 or chd_2:
+        pass
+    else:
+        os.chdir(direct)
+
     chd_3()
     utente = nome_utente.get()
+    tempo_inizio = datetime.now()
     try:
         mod.download_profile(utente)
     except instaloader.exceptions.ProfileNotExistsException:
         messagebox.showerror("Inexistent Profile", "The profile does not exist.")
     except instaloader.exceptions.PrivateProfileNotFollowedException: 
-        messagebox.showerror("Private and not followed profile", "The profile is private and not followed.\nIt's been downloaded only the profile pic.")
+        messagebox.showwarning("Private and not followed profile", "The profile is private and not followed.\nIt's been downloaded only the profile pic.")
     except instaloader.exceptions.LoginRequiredException:
-        messagebox.showerror("Login Needed", "To download posts from this profile you need to login.\nIt's been downloaded only the profile pic.")
+        messagebox.showwarning("Login Needed", "To download posts from this profile you need to login.\nIt's been downloaded only the profile pic.")
     except FileExistsError:
         messagebox.showwarning("Folder Elimination", "You need to delete the folder with the profile pic.")
     else:
+        print("Post scaricati in: {}".format(datetime.now() - tempo_inizio))
         messagebox.showinfo("Posts downloaded", "The profile posts have been downloaded correctly.")
-        frame_info.destroy()
+    os.chdir(direct)
 
 #Show the login frame
 #Mostra il frame per il login
@@ -204,7 +228,9 @@ def change_frame():
 def bg_color():
     colore1 = askcolor()[1]
     if colore1:
-        file_colore2 = open("colore-evidenza.txt", "w").write(colore1)
+        chd_2()
+        file_colore2 = open("colore-sfondo.txt", "w").write(colore1)
+        chd_1()
         messagebox.showinfo("Background color Saved", "The background color has been saved. Restart the app to apply the changes")
     else:
         pass
@@ -212,7 +238,9 @@ def bg_color():
 def fnt_color():
     colore2 = askcolor()[1]
     if colore2:
-        file_colore2 = open("colore-evidenza.txt", "w").write(colore2)
+        chd_2()
+        file_colore2 = open("colore-sfondo.txt", "w").write(colore2)
+        chd_1()
         messagebox.showinfo("Background color Saved", "The background color has been saved. Restart the app to apply the changes")
     else:
         pass
@@ -222,5 +250,5 @@ def fnt_color():
 chd_2()
 
 mod = instaloader.Instaloader(save_metadata=False, post_metadata_txt_pattern="", download_comments=False, download_geotags=False)
-sfondo = open("colore-evidenza.txt", "r").readline()
+sfondo = open("colore-sfondo.txt", "r").readline()
 scritte = open("colore-scritte.txt", "r").readline()
