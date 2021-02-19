@@ -25,9 +25,6 @@ def menu():
 
     menu = tk.Frame(bg=sfondo)
     menu.grid(row=0, column=0, sticky="nw", padx=3, pady=34)
-    #guida_button = tk.Button(menu, text=("Guide"), font=("Helvetica", 12), command=guida, bg=sfondo, fg=scritte)
-    #guida_button.grid(row=0,column=0, padx=3, pady=3, sticky="nwe")
-    #guida_button.configure(relief="flat")
   
     dire_button = tk.Button(menu, text=("Change Directory"), font=("Helvetica", 12), command=directory, bg=sfondo, fg=scritte, activebackground=sfondo, activeforeground=scritte)
     dire_button.grid(row=0,column=0, padx=3, pady=3, sticky="nwe")
@@ -58,17 +55,6 @@ def docum():
 def directory(): 
     directory = filedialog.askdirectory(title="Saving Directory")
     os.chdir(directory)
-
-#Guide
-#Guida
-#def guida():
-#    finestra_guida = tk.Toplevel(bg=sfondo)
-#    finestra_guida.wm_attributes("-topmost", True)
-#    finestra_guida.resizable(0,0)
-#    a = tk.Label(finestra_guida, text="\nFirst of all you have to login into your Instagram account (only if you want to download pictures from a private profile). ", font=("Helvetica", 12), bg=sfondo, fg=scritte).grid(row=0, column=1)
-#    b = tk.Label(finestra_guida, text="Next you have to type the name of the profile under <Download Posts>.", font=("Helvetica", 12), bg=sfondo, fg=scritte).grid(row=1, column=1)
-#    z = tk.Label(finestra_guida, text="The default download directory is where you have the folder with the "".exe"" file of Instagram Downloader.", font=("Helvetica", 12), bg=sfondo, fg=scritte).grid(row=2, column=1)
-#    f = tk.Label(finestra_guida, text="(You can change the directory in the menu)", font=("Helvetica", 12), bg=sfondo, fg=scritte).grid(row=3, column=1)
  
 #Exit
 #Ece dal programma
