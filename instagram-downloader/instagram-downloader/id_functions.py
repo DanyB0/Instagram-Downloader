@@ -1,6 +1,5 @@
 import os
 import sys
-import time
 import instaloader
 import tkinter as tk
 from PIL import Image, ImageTk
