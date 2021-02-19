@@ -19,6 +19,17 @@ def chd_2():
     directory3 = os.getcwd().replace("immagini","") + r"\file-testo"
     os.chdir(directory3)
 
+#Change directory into the posts one
+#Cambio la directory nella cartella dei post
+def chd_3():
+    directory5 = os.getcwd().replace("immagini","")
+    os.chdir(directory5)
+    if not os.path.exists(directory5 + r"\posts"):
+        os.mkdir("posts")
+        os.chdir(directory5 + r"\posts")
+    else:
+        os.chdir(directory5 + r"\posts")
+
 #menu
 def menu():
     global menu
@@ -85,6 +96,7 @@ def login(event):
 #Download posts fo the desired profile --- exceptions handling
 #Scarico i post del profilo desiderato e gestisco le eccezioni
 def insta(event):
+    chd_3()
     utente = nome_utente.get()
     try:
         mod.download_profile(utente)
