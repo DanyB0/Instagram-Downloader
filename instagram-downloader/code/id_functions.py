@@ -4,6 +4,7 @@ from datetime import datetime
 import instaloader
 import tkinter as tk
 import colorama
+import shutil
 from PIL import Image, ImageTk
 from tkinter import messagebox
 from tkinter import filedialog
@@ -12,26 +13,26 @@ from tkcolorpicker import askcolor
 colorama.init()
 
 direct = os.getcwd()
-dire2 = direct.replace("immagini", "")
+dire2 = direct.replace("imm", "")
 
 #Change directory into the text files one
 #Cambio la directory nei file di testo
 def chd_1():
-    directory4 = os.getcwd().replace("file-testo","") + r"\immagini"
+    directory4 = os.getcwd().replace("file-testo","") + r"\imm"
     os.chdir(directory4)
     return directory4
 
 #Change directory into the images one
 #Cambio la directory nelle immagini
 def chd_2():
-    directory3 = os.getcwd().replace("immagini","") + r"\file-testo"
+    directory3 = os.getcwd().replace("imm","") + r"\file-testo"
     os.chdir(directory3)
     return directory3
 
 #Change directory into the posts one
 #Cambio la directory nella cartella dei post
 def chd_3():
-    direct2 = direct.replace("immagini","")
+    direct2 = direct.replace("imm","")
     os.chdir(direct2)
     if not os.path.exists(direct2 + r"\posts"):
         os.mkdir("posts")
@@ -148,9 +149,48 @@ def insta(event):
         messagebox.showwarning("Folder Elimination", "You need to delete the folder with the profile pic.")
         print(colorama.Fore.WHITE)
     else:
+        tempo_fine = datetime.now()
         print(colorama.Fore.GREEN + "posts downloaded")
-        print("time taken to download the posts: {}".format(datetime.now() - tempo_inizio))
-        messagebox.showinfo("Posts downloaded", "The profile posts have been downloaded correctly.")
+        print("time taken to download the posts: {}".format(tempo_fine - tempo_inizio))
+        print(colorama.Fore.WHITE + "dividing images from videos...")
+        #Cambio directory nella cartella con il nome del profilo di cui si stanno scaricando i post
+        os.chdir(os.getcwd() + "\\" + utente)
+        #Prendo e salvo in una lista il nome dei file nella cartella
+        cartella_downl = os.listdir(os.getcwd())
+        #Creo le cartelle "video" e "immagini" se non ci sono e sposto i file nelle rispettive cartelle
+        for file in range (len(cartella_downl)):
+            if cartella_downl[file].endswith(".mp4"):
+                try:
+                    if not os.path.exists(os.getcwd() + r"\video"):
+                        os.mkdir("video")
+                        shutil.move(os.path.abspath(cartella_downl[file]), os.getcwd() + r"\video")
+                    else:
+                        shutil.move(os.path.abspath(cartella_downl[file]), os.getcwd() + r"\video")
+                #Elimino i file doppioni
+                except shutil.Error:
+                    os.remove(cartella_downl[file])
+            elif cartella_downl[file].endswith(".jpg"):
+                try:
+                    if not os.path.exists(os.getcwd() + r"\immagini"):
+                        os.mkdir("immagini")
+                        shutil.move(os.path.abspath(cartella_downl[file]), os.getcwd() + r"\immagini")
+                    else:
+                        shutil.move(os.path.abspath(cartella_downl[file]), os.getcwd() + r"\immagini")
+                #Elimino i file doppioni
+                except shutil.Error:
+                    os.remove(cartella_downl[file])
+        #Cambio directory nei video e rinomino i file
+        os.chdir(os.getcwd() + r"\video")
+        file_video = os.listdir(os.getcwd())
+        for file2 in range (len(file_video)):
+            os.rename(file_video[file2], utente + "_" + str(file2) + ".mp4")
+        #Cambio directory nelle immagini e rinomino i file
+        os.chdir(os.getcwd().replace("video","immagini"))
+        file_imm = os.listdir(os.getcwd())
+        for file3 in range (len(file_imm)):
+            os.rename(file_imm[file3], utente + "_" + str(file3) + ".png")
+        print(colorama.Fore.GREEN + "division completed")
+        messagebox.showinfo("Posts downloaded", "The profile posts are now in their folder.")
     print(colorama.Fore.WHITE)
     os.chdir(direct)
 
@@ -247,9 +287,10 @@ def bg_color():
     colore1 = askcolor()[1]
     if colore1:
         chd_2()
-        file_colore2 = open("colore-sfondo.txt", "w").write(colore1)
+        file_colore1 = open("colore-sfondo.txt", "w").write(colore1)
         chd_1()
         messagebox.showinfo("Background color Saved", "The background color has been saved. Restart the app to apply the changes")
+        file_colore1.close()
     else:
         pass
 
@@ -260,6 +301,7 @@ def fnt_color():
         file_colore2 = open("colore-sfondo.txt", "w").write(colore2)
         chd_1()
         messagebox.showinfo("Background color Saved", "The background color has been saved. Restart the app to apply the changes")
+        file_colore2.close()
     else:
         pass
 
