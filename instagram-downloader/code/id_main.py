@@ -75,18 +75,18 @@ def main():
 #Ask the user if he wants to read the documentation
 #Chiede all'utente se vuole leggere la ducumentazione
 def doc():
-    directory24 = os.getcwd().replace("immagini","") + r"\file-testo"
+    directory24 = os.getcwd().replace("imm","") + r"\file-testo"
     os.chdir(directory24)    
     domanda = tk.messagebox.askquestion ("Open Documentation","Do you want to open the documentation?", icon = "question")
     if domanda == "yes":
         os.system("README.md")
-        open("num.txt", "w").write("1")
+        open("num.txt", "w").write("1").close()
     else:
-        open("num.txt", "w").write("1")
+        open("num.txt", "w").write("1").close()
         pass
     #Change directory into the images one
     #Cambio la directory nelle immagini
-    directory2 = os.getcwd().replace("file-testo","") + r"\immagini"
+    directory2 = os.getcwd().replace("file-testo","") + r"\imm"
     os.chdir(directory2)
 
 #Save the color code and the number (0 or 1)
@@ -97,7 +97,7 @@ numero = open("num.txt", "r").readline()
 
 #Change directory into the images one
 #Cambio la directory nelle immagini
-directory2 = os.getcwd().replace("file-testo","") + r"\immagini"
+directory2 = os.getcwd().replace("file-testo","") + r"\imm"
 os.chdir(directory2)
 
 #Skip the "documentation ask" at every lauch
