@@ -1,0 +1,3 @@
+Colore base dello sfondo
+
+#292525
