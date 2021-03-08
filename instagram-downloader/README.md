@@ -1,4 +1,4 @@
-# Another README of Instagram-Downloader! (just skip this)
+# Instagram-Downloader
 
 ## Screenshots
 [![Screenshot-77.png](https://i.postimg.cc/SKd7dcF4/Screenshot-77.png)](https://postimg.cc/3yyvJ4xf)
@@ -26,3 +26,7 @@
 # Attention Required
 * If you open the menu or the login you have to close them with their closure arrows. If you don't do that you will be unable to close them until the restart of the app  
 * You mustn't delete or rename the files in the folder
+
+# I'm sorry
+### I'm sorry for all the bad code you'll read (probably everything).
+### If you want you can help me to improve :).
