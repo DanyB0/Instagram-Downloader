@@ -1,16 +1,26 @@
 # Instagram-Downloader
 
-# Language: Python
+## Screenshots
+[![Screenshot-77.png](https://i.postimg.cc/SKd7dcF4/Screenshot-77.png)](https://postimg.cc/3yyvJ4xf)
+[![Screenshot-78.png](https://i.postimg.cc/Kj6njNLP/Screenshot-78.png)](https://postimg.cc/H8tJPb6n)
+[![Screenshot-79.png](https://i.postimg.cc/VkBjsXNt/Screenshot-79.png)](https://postimg.cc/tsJ12ZWR)
+[![Senza-nome-1.jpg](https://i.postimg.cc/SQTtDwFn/Senza-nome-1.jpg)](https://postimg.cc/hhmrGZGn)
+[![Senza-nome-2.jpg](https://i.postimg.cc/j5kQ4YwK/Senza-nome-2.jpg)](https://postimg.cc/phzFP7J1)
 
-#########################################################################################################################################################################################
+# Are you interested?
 
-- !!! CREA UN COLLEGAMENTO AL FILE "Instagram-Downloader" SUL DESKTOP !!!
-- IL FILE .exe SI TROVA IN: ...\stuff\Instagram-Downloader
+## Follow the instructions below to be able to use Instagram-Downloader
+* Download the code
+* Unzip the code wherever you like
+* Go to "...\stuff\Instagram-Downloader"
+[![Senza-nome-3.jpg](https://i.postimg.cc/0QY4yQbj/Senza-nome-3.jpg)](https://postimg.cc/sQ2mn3PC)
+* Create a shortcut of the "Instagram-Downloader" file and move it wherever you like
+[![Senza-nome-4.jpg](https://i.postimg.cc/Yqp5j1NH/Senza-nome-4.jpg)](https://postimg.cc/s1N6NG06)
 
-- Per scaricare i post di un profilo privato (unica condizione: seguire il profilo) devi essere loggato con il tuo account Instagram, altrimenti verrà scaricata solo l'immagine profilo.
+# Guide
+* To download private posts (you must follow the profile) you have to login wih your Instagram account, if you are not logged-in will be downloaded only the profile picture
+* The downloaded posts will be in the folder "posts", which will be created whe you download your first post. It's located with the README file
 
-- La directory dove vengono salvati i post di default è la cartella <posts>, che viene creata quando si scaricano i primi posts. Si trova insieme al file README.
-  
-- Se si aprono il menu o il frame per il login vanno chiusi con le rispettive freccie di chiusura. In caso contrario non sarà più possibile chiuederli fino al prossimo avvio dell'app.
-  
-- !!! NON DEVI ELIMINARE O CAMBIARE POSIZIONE AI FILE PRESENTI NELLA CARTELLA "instagram-downloader" !!!
+# Attention Required
+* If you open the menu or the login you have to close them with their closure arrows. If you don't do that you will be unable to close them until the restart of the app  
+* You mustn't delete or rename the files in the folder
