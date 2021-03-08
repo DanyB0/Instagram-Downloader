@@ -27,6 +27,6 @@
 * If you open the menu or the login you have to close them with their closure arrows. If you don't do that you will be unable to close them until the restart of the app  
 * You mustn't delete or rename the files in the folder
 
-# Sorry
+# I'm sorry
 ### Sorry for all the bad code (probably everything).
 ### If you want you can help me to improve :).
