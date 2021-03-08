@@ -1,8 +1,9 @@
 # Instagram-Downloader
 
 ## Screenshots
-[![Screenshot-67.png](https://i.postimg.cc/bJ68HVwh/Screenshot-67.png)](https://postimg.cc/qhC9pLKb)
-[![Screenshot-68.png](https://i.postimg.cc/mgQs6ggV/Screenshot-68.png)](https://postimg.cc/3kJVk7pD)
+[![Screenshot-77.png](https://i.postimg.cc/SKd7dcF4/Screenshot-77.png)](https://postimg.cc/3yyvJ4xf)
+[![Screenshot-78.png](https://i.postimg.cc/Kj6njNLP/Screenshot-78.png)](https://postimg.cc/H8tJPb6n)
+[![Screenshot-79.png](https://i.postimg.cc/VkBjsXNt/Screenshot-79.png)](https://postimg.cc/tsJ12ZWR)
 
 # Are you interested?
 
