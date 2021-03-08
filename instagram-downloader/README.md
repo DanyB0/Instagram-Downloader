@@ -1,7 +1,6 @@
 # Instagram-Downloader
 ## Follow the instructions below to be able to use Instagram-Downloader
-
-* Go to ...\stuff\Instagram-Downloader
+* Go to "...\stuff\Instagram-Downloader"
 * Create a shortcut of the "Instagram-Downloader" file on the desktop
 
 ## Guide
