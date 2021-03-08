@@ -9,8 +9,10 @@
 
 # Are you interested?
 
-## Follow the instructions below to be able to use Instagram-Downloader
-* Download the code
+## Download Instagram-Downloader at this link
+### https://drive.google.com/drive/folders/12qTIIcMGUpiWD38Lbj1M2azMSpZzmt4e?usp=sharing
+
+## Follow the instructions below to be able to use the app
 * Unzip the code wherever you like
 * Go to "...\stuff\Instagram-Downloader"
 [![Senza-nome-3.jpg](https://i.postimg.cc/0QY4yQbj/Senza-nome-3.jpg)](https://postimg.cc/sQ2mn3PC)
