@@ -28,5 +28,5 @@
 * You mustn't delete or rename the files in the folder
 
 # I'm sorry
-### Sorry for all the bad code (probably everything).
+### I'm sorry for all the bad code you'll read (probably everything).
 ### If you want you can help me to improve :).
