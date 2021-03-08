@@ -1,4 +1,11 @@
 # Instagram-Downloader
+
+## Screenshots
+[![Screenshot-67.png](https://i.postimg.cc/bJ68HVwh/Screenshot-67.png)](https://postimg.cc/qhC9pLKb)
+[![Screenshot-68.png](https://i.postimg.cc/mgQs6ggV/Screenshot-68.png)](https://postimg.cc/3kJVk7pD)
+
+# Are you interested?
+
 ## Follow the instructions below to be able to use Instagram-Downloader
 * Go to "...\stuff\Instagram-Downloader"
 * Create a shortcut of the "Instagram-Downloader" file on the desktop
