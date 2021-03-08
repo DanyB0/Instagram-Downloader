@@ -13,14 +13,14 @@
 * Download the code
 * Unzip the code wherever you like
 * Go to "...\stuff\Instagram-Downloader"
-[![Senza-nome-3.jpg](https://i.postimg.cc/RVQFfQnV/Senza-nome-3.jpg)](https://postimg.cc/1fXs1FHL)
+[![Senza-nome-3.jpg](https://i.postimg.cc/0QY4yQbj/Senza-nome-3.jpg)](https://postimg.cc/sQ2mn3PC)
 * Create a shortcut of the "Instagram-Downloader" file and move it wherever you like
-* [![Senza-nome-4.jpg](https://i.postimg.cc/7ZZxzvkm/Senza-nome-4.jpg)](https://postimg.cc/kBL3rpDb)
+[![Senza-nome-4.jpg](https://i.postimg.cc/Yqp5j1NH/Senza-nome-4.jpg)](https://postimg.cc/s1N6NG06)
 
-## Guide
+# Guide
 * To download private posts (you must follow the profile) you have to login wih your Instagram account, if you are not logged-in will be downloaded only the profile picture
 * The downloaded posts will be in the folder "posts", which will be created whe you download your first post. It's located with the README file
 
-## Attention Required
+# Attention Required
 * If you open the menu or the login you have to close them with their closure arrows. If you don't do that you will be unable to close them until the restart of the app  
 * You mustn't delete or rename the files in the folder
