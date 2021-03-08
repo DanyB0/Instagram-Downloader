@@ -13,7 +13,9 @@
 * Download the code
 * Unzip the code wherever you like
 * Go to "...\stuff\Instagram-Downloader"
-* Create a shortcut of the "Instagram-Downloader" file on the desktop
+[![Senza-nome-3.jpg](https://i.postimg.cc/RVQFfQnV/Senza-nome-3.jpg)](https://postimg.cc/1fXs1FHL)
+* Create a shortcut of the "Instagram-Downloader" file and move it wherever you like
+* [![Senza-nome-4.jpg](https://i.postimg.cc/7ZZxzvkm/Senza-nome-4.jpg)](https://postimg.cc/kBL3rpDb)
 
 ## Guide
 * To download private posts (you must follow the profile) you have to login wih your Instagram account, if you are not logged-in will be downloaded only the profile picture
