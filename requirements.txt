@@ -1,4 +1,0 @@
-datetime
-instaloader
-colorama
-Pillow
