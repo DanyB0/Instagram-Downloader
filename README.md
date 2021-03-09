@@ -1,3 +1,4 @@
+[!GitHub]https://img.shields.io/github/license/DanyB0/instagram-downloader
 # Instagram-Downloader
 
 ## Screenshots
