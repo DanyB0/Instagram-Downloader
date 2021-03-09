@@ -1,4 +1,4 @@
-il codice É basato sul file .exe, quindi ho dovuto cambiare i percorsi delle cartelle.
+Il codice É basato sul file .exe, quindi ho dovuto cambiare i percorsi delle cartelle.
 
 Al posto di avere -- os.getcwd().replace() --
 Ho -- os.getcwd() + r"\stuff\imm" -- o altro.
