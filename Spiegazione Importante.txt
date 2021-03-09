@@ -6,3 +6,5 @@ Ho -- os.getcwd() + r"\stuff\imm" -- o altro.
 Avrei avuto -- .replace() -- se avessi messo i file .py nella cartella "imm" e avessi avviato il programma da terminale.
 
 Ho -- os.getcwd() + r"\stuff\imm" -- o altro perchè il file .exe non è nella cartella "imm" ma in delle cartelle prima, quindi per arrivare alle immagini devo aggiungere pezzi al percorso, non toglierli.
+
+Probabilmente mi sono solo complicato la vita e ci sono metodi molto migliori, quindi se volete aiutarmi a migliorare vi prego di farlo.
