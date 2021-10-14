@@ -1,5 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # Instagram-Downloader
+This program is a mix of experiments that I wanted to do about classes and modules, so the code is a completely mess.     
+It's also my "test" about tkinter (what I was able to do with that library)
 
 ## Screenshots
 [![Screenshot-77.png](https://i.postimg.cc/SKd7dcF4/Screenshot-77.png)](https://postimg.cc/3yyvJ4xf)
@@ -9,7 +11,6 @@
 [![Senza-nome-2.jpg](https://i.postimg.cc/j5kQ4YwK/Senza-nome-2.jpg)](https://postimg.cc/phzFP7J1)
 
 # Are you interested?
-
 ## Download Instagram-Downloader [here](https://github.com/DanyB0/instagram-downloader/releases/tag/v1.0)
 ## Follow the instructions below to be able to use the app
 * Unzip the code wherever you like
