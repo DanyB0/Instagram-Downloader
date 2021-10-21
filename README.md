@@ -1,6 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # Instagram-Downloader
-This program is a mix of experiments that I wanted to do about classes and modules, so the code is a completely mess.     
+This program is a mix of experiments that I wanted to do about classes and modules, so the code is a completely mess (I wonder how I wonder why everything works).     
 It's also my "test" about tkinter (what I was able to do with that library)
 
 ## Screenshots
